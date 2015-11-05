@@ -1,8 +1,17 @@
-html
+doctype html
+html.no-js
   head
-    link(rel='stylesheet', href='css/site.css')
+    title Chat
+    link(rel="stylesheet", href="/css/site.css") 
   body
-    // some dummy non-conforming quick dirty html code to test browser-sync. dont't judge me.
-    b lorem
-    |  ipsum upsum dumsum
-// put this under /public/*
+    include template/_header
+    block content
+    include template/_footer
+  script(src="http://fb.me/react-0.12.2.js") 
+  script(src="http://fb.me/JSXTransformer-0.12.2.js")
+  script(src='http://code.jquery.com/jquery-1.7.1.min.js')
+  script(src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js')
+  script(src="/socket.io/socket.io.js")
+  script(type="text/jsx" src="js/mainFrame.js")
+  script(type="javascript" src="js/script.js")
+  
